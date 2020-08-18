@@ -18,6 +18,7 @@ const config: NuxtConfig = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
   },
+  css: ['~/assets/style.less'],
   generate: {
     fallback: true
     // subFolders: true
