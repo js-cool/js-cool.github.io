@@ -17,10 +17,11 @@
     <ul>
       <li>
         子域名，如
-        <a href="https://leader.js.cool" target="_blank" rel="noopener noreferrer">leader.js.ccol</a>
+        <a href="https://leader.js.cool" target="_blank" rel="noopener noreferrer">leader.js.cool</a>
       </li>
       <li>
-        邮箱（邀请制），如： css(at)js.cool
+        邮箱（邀请制），如：
+        <code>css(at)js.cool</code>
       </li>
     </ul>
     <h2>
@@ -28,8 +29,7 @@
     </h2>
     <p>
       我们期望有设计师朋友能够帮忙设计个 Logo 和 官网主页风格，如果您对此感兴趣，请邮件联系
-      <code>i(at)js.cool</code>
-      。
+      <code>i(at)js.cool</code>。
     </p>
     <p>
       关注我们或开始申请：
