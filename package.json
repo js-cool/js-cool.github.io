@@ -1,0 +1,54 @@
+{
+  "name": "js-cool.github.io",
+  "version": "1.0.0",
+  "description": "Website of https://js.cool",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "lint": "eslint --ext .ts,.js,.vue ."
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^1.0.0",
+    "nuxt": "^2.14.3",
+    "nuxt-i18n": "^6.13.9"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.3",
+    "@nuxt/typescript-build": "^2.0.2",
+    "@nuxtjs/eslint-config-typescript": "^3.0.0",
+    "@typescript-eslint/parser": "^3.9.1",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-willin": "^1.0.5",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-cool/js-cool.github.io.git"
+  },
+  "author": "Willin Wang",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/js-cool/js-cool.github.io/issues"
+  },
+  "homepage": "https://github.com/js-cool/js-cool.github.io#readme"
+}

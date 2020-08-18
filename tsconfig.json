@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "baseUrl": ".",
+  "paths": {
+    "~/*": ["./*"],
+    "@/*": ["./*"]
+  },
+  "types": ["@types/node", "@nuxt/types", "nuxt-i18n"]
+}
