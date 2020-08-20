@@ -25,8 +25,9 @@ jobs:
           cd dist
           git init
           git add . && git commit -m ":memo: Auto Generate" || exit 0
-          git push --force "https://${GITHUB_TOKEN}@github.com/js-cool/js-cool.github.io.git" master:master
-          git push --force "https://${CODING_TOKEN}@e.coding.net/willin/js-cool/js-cool.github.io.git" master:master
+          git push --force "https://${GH_TOKEN}@github.com/js-cool/js-cool.github.io.git" master:master
+          git push --force "https://${CODING_USER}:${CODING_TOKEN}@e.coding.net/willin/js-cool/js-cool.github.io.git" master:master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           CODING_TOKEN: ${{ secrets.CODING_TOKEN  }}
+          CODING_USER: ${{ secrets.CODING_USER }}

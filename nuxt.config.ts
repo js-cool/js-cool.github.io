@@ -14,11 +14,23 @@ const config: NuxtConfig = {
         hid: 'description',
         name: 'description',
         content: '为国人开源项目提供免费的子域名'
-      }
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'Willin, JS, JS.COOL, 域名'
+      },
+      { name: 'author', content: 'Willin Wang' },
+      { name: 'format-detection', content: 'telephone=no, email=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    link: [
+      { rel: 'shortcut icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+    ]
   },
-  modules: ['nuxt-i18n'],
+  css: ['~/assets/style.less'],
+  modules: ['nuxt-i18n', '@nuxtjs/google-adsense'],
+  buildModules: ['@nuxtjs/google-analytics'],
   i18n: {
     locales: [
       { name: '简体中文', code: 'zh', iso: 'zh-CN', file: 'zh.js' },
@@ -56,6 +68,13 @@ const config: NuxtConfig = {
         files: './**/*.{ts,js,vue}'
       }
     }
+  },
+  'google-adsense': {
+    id: 'ca-pub-5059418763237956',
+    pageLevelAds: true
+  },
+  googleAnalytics: {
+    id: 'UA-33096931-2'
   }
 };
 
