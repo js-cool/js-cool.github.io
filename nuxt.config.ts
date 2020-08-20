@@ -30,7 +30,7 @@ const config: NuxtConfig = {
   },
   css: ['~/assets/style.less'],
   modules: ['nuxt-i18n', '@nuxtjs/google-adsense'],
-  buildModules: ['@nuxtjs/google-analytics'],
+  buildModules: ['@nuxtjs/google-analytics', '@nuxtjs/sitemap'],
   i18n: {
     locales: [
       { name: '简体中文', code: 'zh', iso: 'zh-CN', file: 'zh.js' },
@@ -75,6 +75,10 @@ const config: NuxtConfig = {
   },
   googleAnalytics: {
     id: 'UA-33096931-2'
+  },
+  sitemap: {
+    hostname: 'https://js.cool',
+    i18n: true
   }
 };
 
