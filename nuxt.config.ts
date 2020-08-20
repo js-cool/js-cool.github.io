@@ -18,6 +18,34 @@ const config: NuxtConfig = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
   },
+  modules: ['nuxt-i18n'],
+  i18n: {
+    locales: [
+      { name: '简体中文', code: 'zh', iso: 'zh-CN', file: 'zh.js' },
+      { name: 'English', code: 'en', iso: 'en-US', file: 'en.js' }
+    ],
+    strategy: 'prefix_except_default',
+    defaultLocale: 'zh',
+    lazy: true,
+    langDir: 'i18n/',
+    seo: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected'
+    },
+    vueI18n: {
+      fallbackLocale: 'zh'
+    }
+  },
+  build: {
+    extractCSS: true,
+    extend(cfg, { isDev }) {
+      if (isDev) {
+        // eslint-disable-next-line no-param-reassign
+        cfg.devtool = '#source-map';
+      }
+    }
+  },
   generate: {
     fallback: true
     // subFolders: true

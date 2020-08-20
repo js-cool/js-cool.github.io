@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
     "nuxt": "^2.14.3",
-    "nuxt-i18n": "^6.13.9"
+    "nuxt-i18n": "^6.13.10"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.3",
