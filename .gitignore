@@ -1,4 +1,5 @@
 .DS_Store
+demo/
 assets/data/
 package-lock.json
 

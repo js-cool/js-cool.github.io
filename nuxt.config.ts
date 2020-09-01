@@ -9,7 +9,7 @@ const config: NuxtConfig = {
     title: 'JS.COOL 就是酷',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' },
       {
         hid: 'description',
         name: 'description',
