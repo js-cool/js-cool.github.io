@@ -1,4 +1,4 @@
-import { ExternalScriptsFunction } from 'remix-utils';
+import { ExternalScripts, ExternalScriptsFunction } from 'remix-utils';
 import {
   Links,
   LiveReload,
@@ -47,6 +47,7 @@ export default function App() {
         <meta name='viewport' content='width=device-width,initial-scale=1' />
         <Meta />
         <Links />
+        <ExternalScripts />
       </head>
       <body>
         <Outlet />
