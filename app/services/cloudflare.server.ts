@@ -67,7 +67,7 @@ export const getSites = async (kv: KVNamespace, APIKEY: string) => {
   }
   json = Object.entries(sites).sort((a, b) => (a[1] - b[1] > 0 ? -1 : 1));
   await kv.put('$$sites', JSON.stringify(json), {
-    expiration: Math.ceil(new Date().getTime() / 1000) + 86400
+    expirationTtl: 86400
   });
   return json;
 };
