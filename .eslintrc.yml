@@ -1,0 +1,19 @@
+root: true
+extends:
+  - next/core-web-vitals
+  - '@willin'
+  - plugin:@typescript-eslint/recommended-requiring-type-checking
+plugins:
+  - import
+parserOptions:
+  project: ./tsconfig.json
+  tsconfigRootDir: ./
+settings:
+  import/resolver:
+    typescript: {}
+rules:
+  camelcase: 0
+  no-shadow: 0
+  import/named: 0
+  quotes: [2, 'single', { 'avoidEscape': true }]
+  '@typescript-eslint/explicit-function-return-type': 0
