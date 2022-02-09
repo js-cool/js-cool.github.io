@@ -1,3 +1,4 @@
+import { ExternalScriptsFunction } from 'remix-utils';
 import {
   Links,
   LiveReload,
@@ -16,6 +17,24 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindStyles },
   { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' }
 ];
+
+const scripts: ExternalScriptsFunction = () => [
+  {
+    src: 'https://willin.wang/clipboard.js'
+  },
+  {
+    async: true,
+    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5059418763237956',
+    crossOrigin: 'anonymous'
+  },
+  {
+    async: true,
+    src: 'https://platform-api.sharethis.com/js/sharethis.js#property=618092f66fc5810019e08702&product=sticky-share-buttons'
+  }
+];
+// and export it through the handle, you could also create it inline here
+// if you don't care about the type
+export const handle = { scripts };
 
 export default function App() {
   return (
