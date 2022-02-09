@@ -30,7 +30,7 @@ const query = `query ($accountTag: string, $filter: AccountRumPageloadEventsAdap
 
 export const getSites = async (kv: KVNamespace, APIKEY: string) => {
   let json = await kv.get('$$sites', 'json');
-  if (json && json.expires > new Date().getTime()) {
+  if (json) {
     return json;
   }
   const variables = {
@@ -65,10 +65,7 @@ export const getSites = async (kv: KVNamespace, APIKEY: string) => {
     sites[item.dimensions.metric] =
       (sites[item.dimensions.metric] || 1) + item.sum.visits;
   }
-  json = {
-    expires: new Date().getTime() + 86400 * 1000,
-    sites: Object.entries(sites).sort((a, b) => (a[1] - b[1] > 0 ? -1 : 1))
-  };
-  await kv.put('$$sites', JSON.stringify(json), 'json');
+  json = Object.entries(sites).sort((a, b) => (a[1] - b[1] > 0 ? -1 : 1));
+  await kv.put('$$sites', JSON.stringify(json), { expiration: 86400 });
   return json;
 };

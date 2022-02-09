@@ -5,7 +5,7 @@ import { LoaderFunctionArgs } from '~/types';
 export const loader: LoaderFunction = async ({
   context
 }: LoaderFunctionArgs) => {
-  const { sites }: { [key: string]: number } = await getSites(
+  const sites: [string, number][] = await getSites(
     context.env.CONTENTS,
     context.env.API_KEY
   );
