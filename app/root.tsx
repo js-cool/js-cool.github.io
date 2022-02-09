@@ -11,7 +11,10 @@ import type { MetaFunction } from 'remix';
 // eslint-disable-next-line import/no-unresolved
 import tailwindStyles from '~/styles/global.css';
 
-export const meta: MetaFunction = () => ({ title: 'New Remix App' });
+export const meta: MetaFunction = () => ({
+  title: 'js.cool | 为开源项目提供提供免费域名',
+  descrption: 'Free Open Source Domain Names'
+});
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindStyles },
